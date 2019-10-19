@@ -1,0 +1,123 @@
+public class HolaMundo {
+	
+	public static void main (String args[]) {
+		
+		System.out.print("Hola mundo");
+	}
+}
+
+/*
+Esta clase sera mas de teoria para los que no estan familiarizados, los que ya saben pueden ayudar a sus compañeros o bien explicando para que todos tengamos el mismo nivel de conocimientos.
+
+Como ya se habia dicho, descargamos eclipse y el JDK (ambos son necesarios para empezar el curso).
+
+Antes de empezar crearemos una carpeta en nuestro escritorio y lo llamaremos "proyectos JAVA sentinel" (sin comillas).
+
+Abriremos eclipse y de inicio nos aparecera una ventana donde nos pedira una ruta que sera nuestro espacio de trabajo, pondremos la ruta de nuestra carpeta que acabamos de crear, seguido de esto daremos aceptar.
+
+COMO CREAR UN PROYECTO
+Parte superior-izquierda, File -> New -> Java Project
+
+Este proyecto lo llamaremos "HolaMundo" (sin comillas).
+
+Los demas campos no nos interesan de momento los dejaremos por defecto, asi que daremos en finish.
+
+COMO CREAR UNA CLASE
+(De momento no nos interesa saber que es una clase, mas adelante a lo largo del curso se explicara con detalle, paciencia)
+En la parte izquierda tenemos una carpeta con el nombre de nuestro proyecto creado, lo abrimos y buscamos la carpeta src, le damos click derecho y le daremos a la opcion, new class.
+
+Esta clase la llamaremos "HolaMundo" (sin comillas).
+
+Nos aparece un pequeño error que es acerca de los paquetes, pero no le daremos importancia asi como a los demas campos, los dejaremos por defecto, asi que finish.
+
+Abrimos nuestra clase que acabamos de crear y en pantalla nos aparecera algo asi:
+
+public class HolaMundo {
+
+}
+
+Dentro de estas llaves escribiremos lo siguiente:
+
+public static void main (String args[]) {
+
+}
+
+Ahora dentro de esta nueva instruccion escribiremos lo siguiente:
+
+System.out.print("Hola mundo");
+
+Por lo cual nos quedara nuestro codigo de la siguiente forma:
+
+public class HolaMundo {
+
+    public static void main (String args[]) {
+
+        System.out.print("Hola Mundo");
+    }
+}
+
+Antes de compilar o correr nuestro programa guardaremos cambios con la combinacion de teclas
+Ctrl + s
+
+En la parte superior encontraremos una flecha de Play o bien un triangulo apuntando a la derecha de color verde, clickeamos en ese icono, tardara unos segundos y nos aparece en consola el el mensaje que esta entre comillas.
+
+CON ESTE MENSAJE DE LES DA LA BIENVENIDA A TODOS LOS INTEGRANTES DE ESTE CURSO
+
+Posibles preguntas o inquietudes que tengan
+
+El nombre que le demos a nuestro proyecto no le podemos poner caracteres extraños ($&*:#@+) de preferencia solo nombre y numeros, ejemplos:
+Bienvenida1
+Primeros Pasos
+
+Porque estamos escribiendo cada palabra con la primera en mayuscula y lo demas en miniscula y todo junto?
+Java es un lenguaje "case sensitive", es decir que es sensible a mayusculas y minusculas ya que hay una gran diferencia para para el, ejemplo:
+numero1
+Numero1
+NumEro1
+numero_1
+NumeroPrimo
+Numero_Primo
+numeroPrimo
+...
+ A pesar de que digan lo mismo, son distintas entre si,  y cuando creamos una clase se recomienda utilizar "Camel Case", es decir estilo camello, donde se dijo con anterioridad, la primera letra de una palabra tiene que ser en mayuscula y lo demas en minusculas y juntalo todo en una sola "palabra" ejemplo:
+HolaMundo
+Hola_Mundo
+Solo en la creacion de clases recuerden lo siguiente:
+No utilizar caracteres extraños
+Utilizar camel case
+Siempre utilizar primero letras y luego numeros nunca alrevez
+No separar palabras por espacios
+
+Porque en la instruccion donde imprimimos hola mundo tenemos que poner ";" y no una llave?
+Soy mexicano, asi que no se como se llamen en otros paises, yo conosco estos simbolos con el siguiente nombre
+() - parentesis
+{} - llaves
+[] - corchetes
+
+Retomando a la pregunta, solo hay algo que deben de saber, las sentencias siempre terminan en ";" y las clases siempre empiezan en "{" terminan en "}"
+Como esas instrucciones fueron las que vimos solo sabran eso, ya que mas adelante veremos otro tipo de instrucciones, como las utilizamos y como abrirlas y cerrarlas
+
+Es la unica forma para poder imprimir mensajes?
+Existe otra u otras pero esperen a su momento
+
+Porque estamos utilizando espacios en cada instruccion, nuestro codigo se va mas hacia la derecha?
+Esto se llama identar  y es la mejor practica para leer codigo asi como es mas facil de encontrar errores e instrucciones, puedes hacer tu codigo en una sola linea pero si ese codigo se lo dejas a otro programador no entendera que hiciste asi que aprendan a identar, el espacio para una nueva instruccion de izquierda a derecha es de un tabulador o bien 4 espacios
+
+Como se cuantos espacios espacios debo utilizar?
+Nuestro codigo se lee de arriba a abajo y de izquierda a derecha y procuren, hay que saber identificar que instrucciones estan del mismo nivel y cuales no, ejemplo:
+
+public class HolaMundo {
+.
+.    public static void main (String args[]) {
+.    .
+.    .    System.out.print("Hola Mundo");
+.    }
+}
+
+Como se puede observar public class HolaMundo esta a cierta altura y su llave de cierre, se cierra a esa misma altura.
+Sucede lo mismo con la instruccion public static void main, empezo en cierta altura y su respectivo llave de cierre se encuentra a esa misma altura, recuerden identar
+
+y ya por ultimo y por hoy
+despues de crear nuestras carpetas del proyecto y archivos del proyecto, de preferencia no cambien ningun nombre o los mueva de directorio porque esto les puede traer problemas al momento de ejecutarlo o abrirlo.
+Se puede corregir? Si, si se puede, pero se recomienda no hacerlo POR NADA EN EL MUNDO
+*/
