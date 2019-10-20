@@ -1,0 +1,170 @@
+public class UsoPrint {
+	
+	public static void main(String args[]) {
+		
+		//System.out.print("Bienvenidos a nuestro curso de programación de JAVA liderado por Junior y amiguitos");
+		
+		/*
+		System.out.print("Bienvenidos a");
+		System.out.print("nuestro curso de programación de JAVA");
+		System.out.print("liderado por Junior y amiguitos");
+		*/
+		
+		/*
+		System.out.println("Bienvenidos a");
+		System.out.println("nuestro curso de programación de JAVA");
+		System.out.print("liderado por Junior y amiguitos");
+		*/
+
+		System.out.printf("%s%n%s%n%s%n",
+				"Bienvenidos a",
+				"nuestro curso de programación de JAVA",
+				"liderado por Junior y amiguitos");
+		
+	}
+}
+/*
+Hoy aprendeeremos los comentarios, el uso del print y sus derivados, y como y cuando ocuparlos, esto es basico en la programacion para poder ampliar su lenguaje.
+
+Una de las cosas importantes mientras estamos aprendiendo es tomar nota, documentar o saber que esta haciendo cada instruccion que dejamos tanto para nosotros mismos como para personas que quieran saber que estamos haciendo en nuestro codigo
+
+Recuerden tambien tener sus apuntes en alguna libreta
+
+Para esto nos sirven los comentarios en nuestro codigo, bueno  El compilador de Java ignora los comentarios, de manera que la computadora no hace nada cuando el programa se ejecuta
+*/
+
+//  indica que es un comentario de fin de linea por lo cual podemos seguir escribiendo en esa linea sin que nos afecte en el codigo, no necesariamente necesita iniciarze al inicio de nuestra linea, sino que la podemos utilizar en medio de nuestro codigo o al final de alguna instruccion con tal de tener notas de nuestro codigo
+/*  podemos escribir en distintas nineas hasta que cerremos nuestro comentario, es como si fueran las llaves, corchetes, patentesis, etc */
+/* abres comentario
+*/ cierras comentario
+
+//Sere todo un experto en programacion y tu no lo sabras
+
+/*
+Sere todo un experto
+en programacion
+y tu no lo sabras
+*/
+
+/*
+Para poder programar es necesario tener un cierto dominio del ingles, ya que en su mayoria las intrucciones estan escritas en ingles.
+
+En nuestro mismo proyecto crearemos una nueva clase y la llamaremos "UsoPrint" (sin comillas).
+
+NOTA: En este curso siempre aprenderan a escribir codigo y no a copiar y pegar, ANALIZEN lo que estan escribiendo esto les facilitara en el dominio de este lenguaje y sus instrucciones.
+
+Escribiremos nuestro metodo main como la vez pasada:
+public static void main(String args[]){
+
+}
+
+Dentro de este metodo escribiremos la siguiente sentencia:
+System.out.print("Bienvenidos a nuestro curso de programación de JAVA liderado por Junior y amiguitos");
+
+Guardamos y compilamos, aparecera en consola nuestro mensaje que mandamos a imprimir y veremos que nuestro cursor esta parpadeando al final de nuestro mensaje, que sucede si quiero escribir otro mensaje abajo?, veamos.
+
+Vamos a hacer cambios en nuestro codigo, eliminamos nuestra ultima sentencia y pondremos lo siguiente:
+
+System.out.print("Bienvenidos a");
+System.out.print("nuestro curso de programación de JAVA");
+System.out.print("liderado por Junior y amiguitos");
+
+Guardamos y compilamos, aparecera lo siguiente en consola:
+
+Bienvenidos anuestro curso de programación de JAVAliderado por Junior y amiguitos
+
+Que esta sucediendo? Pero si estamos poniendo en otra sentencia en otra linea, esta mal ese lenguaje no sirve, no esta respetando lo que le estoy diciendo...BLA BLA BLA.. 
+
+Tranquilo amiguito no esta mal, es nuestro problema por no darle las instrucciones correctas, recuerdas donde estaba nuestro cursor cuando hicimos la primera sentencia?, exacto!!!
+Nuestro codigo esta empezando a escribir seguido de donde esta ese cursor o la ultima vez que aparecio.
+
+Pero entonces tengo que darle 20 o 30 espacios a mi codigo para que repete un salto de linea? No amiguito simplemente tenemos que añadirle algo mas a nuestro print:
+
+System.out.println("Bienvenidos a");
+System.out.println("nuestro curso de programación de JAVA");
+System.out.print("liderado por Junior y amiguitos");
+
+Guardamos y compilamos y nos aparecera nuestro texto de la siguiente manera:
+
+Bienvenidos a
+nuestro curso de programación de JAVA
+liderado por Junior y amiguitos
+
+Lo que esta haciendo nuestro println seria, imprime (print) y luego empieza en la siguiente linea (ln "line next")
+
+Como puedo poner saltos de linea en una sola sentencia para no andar escribiendo tantas sentencias?
+Utilizando "\n" (sin comillas) dentro de nuestro texto, veamos.
+
+Borramos las sentencias print y pondremos lo siguiente:
+
+System.out.print("Bienvenidos a\nnuestro curso de programación de JAVA\nliderado por Junior y amiguitos");
+
+Pero porque no estan apareciendo \n si yo lo escribi en la sentencia, que clase de brujeria es esta, mi IDE no sirve, mi PC no sirve, yo no sirvo, no debi nacer... Tranquilo amiguito estamos para ayudarte, esto es muy sencillo esto se conoce como caracter de escape
+el cual tiene un significado especial para los métodos print y println, cuando aparece una barra diagonal inversa en una cadena de caracteres (lo que tenemos dentro de las comillas), Java la combina con el siguiente carácter para formar una secuencia de escape
+
+Que otros tipos de secuencia de escape existen?
+
+\n Nueva línea. Coloca el cursor de la pantalla al inicio de la siguiente línea.
+\t Tabulador horizontal. Desplaza el cursor de la pantalla hasta la siguiente posición de tabulación.
+\r Retorno de carro. Coloca el cursor de la pantalla al inicio de la línea actual; no avanza a la siguiente línea. Cualquier carácter que se imprima después del retorno de carro sobrescribe los caracteres previamente impresos en esa línea.
+\\ Barra diagonal inversa. Se usa para imprimir un carácter de barra diagonal inversa.
+\” Doble comilla. Se usa para imprimir un carácter de doble comilla. Por ejemplo, System.out.println("\"entre comillas\""); muestra "entre comillas".
+
+NOTA: estas son las mas comunes en Java, pueden buscar otros tipos de secuencia de escape que existen para este lenguaje
+
+https://www.coursehero.com/file/p5u3h7u/8-CU%C3%81LES-SON-LOS-DIFERENTES-ESPECIFICADORES-DE-FORMATO-EN-JAVA-d-o-i-Entero/
+
+Oye, pero si utilizo todos esos tipos de simbolos no entendere que estoy haciendo y ademas se va todo hacia la derecha y me pierdo, hay alguna forma de imprimir eso mismo pero en escalera? Claro que se puede amiguito
+
+Entonces, borramos nuestras sentencias y pondremos lo siguiente:
+
+System.out.printf("%s%n%s%n%s%n",
+    "Bienvenidos a",
+    "nuestro curso de programación de JAVA",
+    "liderado por Junior y amiguitos");
+
+Guardamos y compilamos, y nos aparecera lo siguiente:
+
+Bienvenidos
+a nuestro curso de programación de JAVA
+liderado por Junior y amiguitos
+
+Pero que es eso de printf y todos esos caracteres con porsentaje?
+Su traduccion seria, imprimir (print) con formato(f "format") y en tanto a los caracteres o simbolos raros que ocupamos se llaman Especificadores de Formato
+
+No veremos todos ahorita, asi que esperen a su momento a verlos poco a poco, esta sentencia de printf la estaremos ocundo poco a poco a lo largo del curso asi que tenganlo muy en cuenta asi como los especificadores.
+
+Lo primero que tenemos es el uso de la coma "," al termino de una cadena, este lo que hace es un separador de cadenas, si no la ponemos, nuestro codigo dara error  
+
+De momento explicaremos lo que acabamos de escribir y porque lo estamos dividiendo asi:
+%s Imprime un string (cadena de caracteres)
+%n Da un salto de linea
+
+Entonces tenemos:
+Imprime mi cadena de caracteres y da un salto de linea (%s%n),
+Imprime mi siguiente cadena de caracteres y da un salto de linea (%s%n),
+Imprime mi siguiente cadena de caracteres y da un salto de linea (%s%n)
+
+Con esto debemos de tener muy encuenta cuantas veces debemos de imprimir, que si nos pasamos de (%s%n) nuestro programa puede tener errores, ejemplo
+System.out.printf("%s%n%s%n%s%n%s%n%s%n",
+    "Bienvenidos a",
+    "nuestro curso de programación de JAVA",
+    "liderado por Junior y amiguitos");
+
+Aqui le estamos diciendo que imprima 5 cadenas (cadena = cadena de caracteres), las cuales esas cadenas no existen hasta que las pongas
+
+System.out.printf("%s%n%s%n",
+    "Bienvenidos a",
+    "nuestro curso de programación de JAVA",
+    "liderado por Junior y amiguitos");
+
+Aqui le estamos diciendo que imprima 2 cadenas, lo cual no existe la cadena 3, entonces solo te imprimira lo siguiente:
+
+Bienvenidos a
+nuestro curso de programación de JAVA
+
+Exacto, se perdio tu ultima cadena y no la esta reconociendo
+
+Si quieren buscar mas acerca de estos formatos pueden ver esta pagina: http://www.it.uc3m.es/pbasanta/asng/course_notes/input_output_printf_es.html
+Recuerden que algunos de estos los veremos mas adelante.
+*/
