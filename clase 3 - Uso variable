@@ -26,16 +26,16 @@ Esta clase es de teoria, para esta clase veremos los tipos de datos primitivos d
 
 Existen 8 tipos de datos primitivos
 
-Dato		    Descripcion				                Tamaño en bits		Valor por defecto	      Valor minimo			      Valor maximo
+Dato		    Descripcion				       Tamaño en bits		Valor por defecto	      Valor minimo			      Valor maximo
 
-byte	    Numero entero con signo			            8			              0			              -128				              128			
-short	    Numero entero con signo			            16			            0			              -32768				            32767
-int	      Numero entero con signo			            32			            0			              -2147483648			          2147483647
-long	    Numero entero con signo			            64			            0L			            -9223372036854775808		  9223372036854775807
-float	    Numero en coma flotante sencillo		    32			            0.0f			          ±3.40282347E+38			      ±1.40239846E-45
-double    Numero en coma flotante doble			      64			            0.0d			          ±1.7976931348231570E+308	±4.94065645841246544E-324
-char	    Carácter Unicode sencillo			          16			            \u0000			        \u0000				            \FFFF
-boolean   Aquellos que tienen un valor de true o false 	1			false			-				-
+byte	    Numero entero con signo			            8			       0		      -128				      128			
+short	    Numero entero con signo			            16			       0		      -32768				      32767
+int	    Numero entero con signo			            32			       0		      -2147483648			      2147483647
+long	    Numero entero con signo			            64			       0L		      -9223372036854775808		      9223372036854775807
+float	    Numero en coma flotante sencillo		    	    32			       0.0f		      ±3.40282347E+38			      ±1.40239846E-45
+double	    Numero en coma flotante doble			    64			       0.0d		      ±1.7976931348231570E+308	              ±4.94065645841246544E-324
+char	    Carácter Unicode sencillo			            16			       \u0000		      \u0000				      \FFFF
+boolean     Aquellos que tienen un valor de true o false 	    1			       false		      -				              -
 
 Hay un tipo de dato String para el manejo de cadenas que no es en si un tipo de dato primitivo. Con el tipo de dato String podemos manejar cadenas de caracteres separadas por comillas.
 
