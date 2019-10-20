@@ -1,0 +1,149 @@
+public class UsoVariable {
+	
+	public static void main(String args[]) {
+		/*
+		byte edad;
+		edad = 21;
+		
+		System.out.println(edad);
+
+		byte otra_edad = 20;
+		
+		System.out.println(otra_edad);
+		*/
+		
+		byte edad;
+		edad = 21;
+		
+		byte otra_edad = 20;
+		
+		System.out.print("Yo tengo "+ edad + " años " + "y mi amigo tiene " + otra_edad + " años");
+		
+	}
+}
+
+Esta clase es de teoria, para esta clase veremos los tipos de datos primitivos de java, variables y el porque nos interesa conocerlos
+
+Existen 8 tipos de datos primitivos
+
+Dato		    Descripcion				                Tamaño en bits		Valor por defecto	      Valor minimo			      Valor maximo
+
+byte	    Numero entero con signo			            8			              0			              -128				              128			
+short	    Numero entero con signo			            16			            0			              -32768				            32767
+int	      Numero entero con signo			            32			            0			              -2147483648			          2147483647
+long	    Numero entero con signo			            64			            0L			            -9223372036854775808		  9223372036854775807
+float	    Numero en coma flotante sencillo		    32			            0.0f			          ±3.40282347E+38			      ±1.40239846E-45
+double    Numero en coma flotante doble			      64			            0.0d			          ±1.7976931348231570E+308	±4.94065645841246544E-324
+char	    Carácter Unicode sencillo			          16			            \u0000			        \u0000				            \FFFF
+boolean   Aquellos que tienen un valor de true o false 	1			false			-				-
+
+Hay un tipo de dato String para el manejo de cadenas que no es en si un tipo de dato primitivo. Con el tipo de dato String podemos manejar cadenas de caracteres separadas por comillas.
+
+El elemento String es un tipo de dato inmutable. Es decir, que una vez creado, su valor no puede ser cambiado. El String no es un tipo de dato primitivo del lenguaje Java, pero su uso es igual de importante que el de los tipos de datos que acabamos de ver.
+
+Que es una variable?
+Espacio en la memoria del ordenador donde se almacenara un valor que podra cambiar durante la ejecucion del programa, es decir que podra variar (cambiar) en el transcurso del programa
+
+Porque utilizar variables?
+Porque tendremos que guardar valores temporalmente para necesitarlos mas adelante en ese programa
+
+Como se crea una variable?
+Tipo de dato + nombre de la variable.Ejemplo:
+
+int cambio;
+
+("int" es el tipo de dato y "cambio" es el nombre de esa variable)
+
+Como se inica una variable o como se le asigna un valor a esa variable?
+nombre_de_la_variable = valor.Ejemplo:
+
+cambio = 1200;
+
+NOTA: No puedes utilizar variables si aun no las haz creado.
+
+Ahora bien, porque nos interesa saber el tamaño en bits de cada tipo de dato?
+Porque hay personas que solamente andan declarando variables y no saben lo que estan haciendo cuando y llegan a tener problemas de desbordamiento, corrupcion de memoria o bien de lentitud del equipo, osea que estan estan afectando la memoria RAM del equipo
+
+Pero si yo tengo una 16 de RAM, estoy jugando en linea desde mi PC con 30 videos de fondo con maxima calidad, programas haciendo procesos, stremeando, mientas ando editando un video, subiendo y descargando archivos pesados desde chrome y jamas tengo esa clase de cosas...BLA BLA BLA
+Tranquilo amiguito no todos somos tan privilegiados como tu, habra veces en las que tengas que hacer tu programa de acuerdo a las especificaciones de cierto equipo y tendras que aprender a OPTIMIZAR tu programa por eso una forma de optimizar es sabiendo que tipo de datos debemos de ocupar, si aun no te a quedado claro, un ligero ejemplo:
+
+int numero = 20;
+(en una misma linea estoy haciendo una declaracion de una variable y le estoy asignando un valor)
+
+La variable que estamos creando es de tipo entero y le estamos dando un valor de 20, cuando esta puede ir de -2147483648 a 2147483647, y solo por esta variable estamos ocupando 32 bits de nuestra memoria RAM a lo largo, si haces un programa donde tengas declarado 10000 variables de tipo long donde solo estes ocupando valores de no mas de 1000 y tengas que utilizar una computadora de 1GB en RAM donde sabes que ese GB se divide entre otros procesos, pues obviamente estas haciendo un desperdicio de memoria RAM
+Mejor porque no utilizar tipo de variable que se ajuste mas a esas necesidades sin dañar tu memoria RAM, ejemplo:
+
+short numero = 20;
+
+Con este tipo de variable solo estamos ocupando 16 bits de la memoria RAM, o mejor aun, porque no ocupar 8 bits de tu memoria RAM
+
+byte numero = 20;
+
+NOTA: Si te quieres exceder y el tipo de dato byte no te lo permite porque solo te deja hasta 128 entonces tendras que cambiar tu tipo de dato a uno que su te lo permita, asi sucesivamente.
+
+Bien ya que tenemos la teoria, vayamos a la practica
+
+En nuestro proyecto creamos una clase y la llamaremos "UsoVariables" (sin comillas)
+
+Seguido de esto creamos nuestro metodo main
+
+Vamos a hacer una practica muy pequeña
+
+//Primero creamos y mas adelante se le asigna un valor
+byte edad;
+edad = 21;
+
+//Creamos y enseguida le asignamos un valor en la misma linea
+byte otra_edad = 20;
+
+La primera vez que las creamos y asignamos el propio IDE nos marcala en la parte izquierda de la linea un foco que nos esta diciendo que no estamos ocupando esas variables, que si no las ocupas las quites, porque estan ocupando espacio en tu memoria RAM, tranquilo que si las vamos a ocupar, pero...
+
+Como podemos imprimir nuestros valores?
+Recuerda que para poder imprimir debemos de utilizar print, entonces hacemos las sentencias despues de la declaracion de las variables:
+
+System.out.println(edad);
+System.out.println(otra_edad);
+
+Aparece lo siguiente:
+
+21
+20
+
+Pero porque no tiene comillas dentro de los parentesis? Las comillas solo se ocupan en las cadenas de caracteres, en variables que NO sean cadenas solo numeros NO se ocupan las comillas al momento de imprimir
+
+Bien otro ejemple, cambiaremos nuestro codigo de la siguiente manera:
+
+byte edad;
+edad = 21;		
+System.out.println(edad);
+
+byte otra_edad = 20;		
+System.out.println(otra_edad);
+
+Guardamos y compilamos y tendremos el mismo resultado, pero que sucede si mandamos a imprimir la primera variable que aun no esta creada?, es decir:
+
+byte edad;
+edad = 21;
+		
+System.out.println(otra_edad);
+		
+byte otra_edad = 20;
+
+El propio IDE les dice con un foquito y una X al inicio de esta linea que hay un error, esto es porque apesar de que declaramos nuestra variable despues de haberla llamado el programa recuerden que se lee de arriba a abajo y de izquierda a derecha, si al momento de mandar imprimir no encuentra esa variable inmediatamente dara un error.
+Por eso es preferible primero declarar y despues utilizarla.
+
+Como puedo juntar las 2 edades en una sola sentencia y ulizando cadenas, es decir utilizando un texto?
+sencillo amiguito, para eso utilizaremos la concatenacion, que escribiremos de la siguiente forma
+
+System.out.print("Yo tengo "+ edad + " años y mi amigo tiene " + otra_edad + " años");
+
+La concatenacion es juntar o unir cadenas con cadenas o bien cadenas con variables, aqui otro ejemplo:
+
+System.out.print("Yo tengo "+ edad + " años " + "y mi amigo tiene " + otra_edad + " años");
+
+EJERCICIO
+Imprimir con printf en una sola sentencia y que en la pantalla aparezca, de la siguiente manera:
+
+Yo tengo 21 años
+y mi amigo, Junior
+20 años
