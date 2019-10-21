@@ -1,0 +1,123 @@
+public class UsoMath {
+	public static void main(String args[]) {
+		
+		double numero = 7;
+		double resultado;
+		double exponente = 4;
+		double angulo = 10;
+		
+		resultado = Math.sqrt(numero);
+		System.out.println("La raiz de mi numero es: " + resultado);
+		
+		System.out.printf("Redondeando a un numero entero la raiz de resultado: %d%n", Math.round(resultado));
+		
+		resultado = Math.pow(numero, exponente);
+		System.out.printf("El numero %.0f elevado a %.0f su resultado es %.0f%n",numero, exponente, resultado);
+		
+		System.out.println("El valor de PI es: " + Math.PI);
+		
+		System.out.println("El seno del angulo de 10 es: " + Math.sin(angulo));
+		
+		System.out.println("El coseno del angulo de 10 es: " + Math.cos(angulo));
+		
+		System.out.println("El tangente del angulo de 10 es: " + Math.tan(angulo));
+		
+		System.out.println("El cotangente del angulo de 10 es: " + Math.atan(angulo));
+		
+	}
+}
+
+Hoy aprenderan acerca de la clase Math y el porque es importante conocerla, con esto mismo se abordara un poco mas en el tipo de datos y una ayuda que nos brinda el IDE para no tener problemas.
+
+Bueno, en Java siempre en cada programa como minimo debemos de tener 1 clase de las cuales hay 2 tipos de clases:
+clase propia: Es la clase que nosotros creamos en cada clase, clases elaboradas por nosotros.
+clases predefinidas: Estas son clases que ya vienene integradas en java, para que podamos ocuparlas en caso de que las necesitemos.
+
+Entre estas clases predefinidas algunos ejemplos serian:
+math, array, string, etc...
+
+En esta ocacion nos concentraremos en la clase math para hacer unos pequeños calculos matematicos, tranquilos, no nos aprenderemos todas las clases que tiene java porque es imposible memorizarlas mas aparte de que cada clase tienen diferentes metodos.
+Si queremos ver la documentacion de todas estas clases y como ocuparlas  junto con una ligera descripcion de que es lo que hace cada clase, entonces debemos de conocer la API de java.
+
+https://docs.oracle.com/javase/7/docs/api/
+
+Aqui encontraran todo acerca de java, si el links no funciona porque cambiaron de version solo busquen en google o en su buscador de preferencia "api de java" y entren al primer link de parte de la compañia oracle.
+Como se comento, NO se van a aprender todas jamas ninguna persona humana o que yo conozca puede aprenderse toda la API con exactitud y mucho menos lo haran en este curso, solo es que sepan donde consultar cuando cuando necesitan saber el uso de alguna clase y los paquetes de java (mas adelante entraremos en esto)
+Lo importante es que sepan donde buscar y mas aparte se dieron cuenta que necesitas sus conocimientos de ingles aunque sea en comprension.
+Si se lleva a haber a alguna actualizacion de version, se tendra que actualizar la API entonces es importante que la conoscan, porque no sabemos si puede cambiar dentro de un año o bien dentro de 1 hora, esten atentos a las actualizacion de esta API.
+
+Algunos metodos de la clase Math:
+
+Math.sqrt(numero)		square root (raiz cuadrada) de un numero	a = Math.sqrt(9);	a = 3
+Math.pow(base, exponente)	elevar la "base" al "exponente"			a = Math.pow(2,4);	a = 16
+Math.round(numero_decimal)	redondea un numero decimal			a = Math.round(1.89);	a = 2
+Math.PI				constante del numero PI				a = Math.PI		a = 3.141592...
+Math.sin(angulo)		seno de un angulo				a = Math.sin(0);	a = 0
+Math.cos(angulo)		coseno de un angulo				a = Math.cos(0);	a = 1
+Math.tan(angulo)		tangente de un angulo				a = Math.tan(0);	a = 0
+Math.atan(angulo)		cotangente de un angulo				a = Math.atan(0);	a = 0
+
+Creamos otro clase en nuestro proyecto y lo llamaremos "UsoMath", agremamos nuestro metodo main y pondremos lo siguiente:
+
+int numero = 7;
+int resultado;
+		
+resultado = Math.
+
+Al momento de escribir el ultimo "." nos aparece un cuadro este cuadro se llama intellisense que es un auto acompletador con ayuda y tiene la misma informacion que maneja la API.
+seguido de este punto si ponermos "sqrt" (sin comillas) aparece lo siguiente en nuestro intellisense:
+
+sqrt(double a): double - Math
+
+Lo que nos esta diciendo es:
+
+raiz_cuadrada( necesita_una_variable_de_tipo_de_dato_double_):para_dar_como_resultado_un_tipo_de_dato_double
+
+Si ponemos dentro de estos parentesis nuestra variable "numero", tendremos problemas, ya que el metodo de la clase Math, nos esta pidiendo que la variable "numero" sea de tipo double (es el valor que se esta evaluando), pero tambien tendremos problemas porque necesitamos que la variable "resultado" sea de tipo double ( es el resultado que tendremos de ese metodo)
+Por lo cual tendremos que hacer los siguientes cambios:
+
+double numero = 7;
+double resultado;
+		
+resultado = Math.sqr(numero);
+
+Mandamos a imprimir nuestro resultado y nos dara lo siguiente:
+
+La raiz de mi numero es: 2.645751
+
+Listo esa es nuestra raiz cuadrada de 7
+Ahora gracias a esto utilizaremos los demas metodos para que veamos en la practica que es lo que se esta haciendo.
+
+double numero = 7;
+double resultado;
+double exponente = 4;
+double angulo = 10;
+		
+resultado = Math.sqrt(numero);
+System.out.println("La raiz de mi numero es: " + resultado);
+		
+System.out.printf("Redondeando a un numero entero la raiz de resultado: %d%n", Math.round(resultado));
+		
+resultado = Math.pow(numero, exponente);
+System.out.printf("El numero %.0f elevado a %.0f su resultado es %.0f%n",numero, exponente, resultado);
+		
+System.out.println("El valor de PI es: " + Math.PI);
+		
+System.out.println("El seno del angulo de 10 es: " + Math.sin(angulo));
+		
+System.out.println("El coseno del angulo de 10 es: " + Math.cos(angulo));
+		
+System.out.println("El tangente del angulo de 10 es: " + Math.tan(angulo));
+		
+System.out.println("El cotangente del angulo de 10 es: " + Math.atan(angulo));
+
+Por lo cual obtendremos lo siguiente:
+
+La raiz de mi numero es: 2.6457513110645907
+Redondeando a un numero entero la raiz de resultado: 3
+El numero 7 elevado a 4 su resultado es 2401
+El valor de PI es: 3.141592653589793
+El seno del angulo de 10 es: -0.5440211108893698
+El coseno del angulo de 10 es: -0.8390715290764524
+El tangente del angulo de 10 es: 0.6483608274590866
+El cotangente del angulo de 10 es: 1.4711276743037347
