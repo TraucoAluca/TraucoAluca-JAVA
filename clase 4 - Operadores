@@ -1,0 +1,204 @@
+public class UsoOperadores {
+	public static void main(String args[]) {
+		
+		final float numero_1 = 7;
+		final float numero_2 = 6;
+		float resultado = numero_1 + numero_2;
+		
+		System.out.printf("La suma de mis constantes es de: %.0f %n%n", resultado);
+		
+		System.out.printf("Resultado se imprimira su valor primero y despues incrementaras en 1: %.0f %n%n", resultado++);
+		
+		System.out.printf("Ahora resultado tiene un valor de: %.0f %n%n", resultado);
+		
+		System.out.printf("Ahora resultado incrementaras su valor en 1 y despues te imprimiras: %.0f  %n%n", ++resultado);
+		
+		System.out.printf("Resultado se imprimira su valor primero y despues decrementaras en 1: %.0f %n%n", resultado--);
+		
+		System.out.printf("Ahora resultado tiene un valor de: %.0f %n%n", resultado);
+		
+		System.out.printf("Ahora resultado decrementar su valor en 1 y despues te imprimiras: %.0f  %n%n", --resultado);
+		
+		System.out.printf("Resultado tiene el valor de la constante numero_1: %.0f  %n%n", resultado = numero_1);
+		
+		System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora le sumaremos la constante numero_2 : %.0f  %n%n", resultado += numero_2);
+		
+		System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora le restaremos la constante numero_2 : %.0f  %n%n", resultado -= numero_2);
+		
+		System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora la multiplicamos la constante numero_2 : %.0f  %n%n", resultado *= numero_2);
+		
+		System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora la dividimos entre la constante numero_2 : %.0f  %n%n", resultado /= numero_2);
+		
+		System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora obtendremos el resido entre la constante numero_2 : %.0f  %n%n", resultado %= numero_2);
+		
+		resultado = numero_1 - numero_2;
+		System.out.printf("La resta de mis constantes es de: %.0f %n%n", resultado);
+		
+		resultado = numero_1 * numero_2;
+		System.out.printf("La multiplicacion de mis constantes es de: %.0f %n%n", resultado);
+		
+		resultado = numero_1 / numero_2;
+		System.out.printf("El resultado de la division de mis constantes es de: %.5f %n%n",resultado);
+		
+		resultado = numero_1 % numero_2;
+		System.out.printf("El residuo de la division de mis constantes es de: %.1f ", resultado); 
+	}
+}
+
+Hoy aprenderan acerca de las constantes y operadores 
+
+Que es una constante?
+Espacio en la memoria del ordenador donde se almacenara un valor que no podra cambiar durante la ejecucion del programa
+
+Porque utilizar constantes?
+Porque tendremos que guardar valores temporalmente para necesitarlos mas adelante en ese programa, , es decir que ese valor va a ser fijo, durante el transcurso del programa
+
+Como se crea una constante?
+palabra "final" + tipo de dato + nombre de la variable.Ejemplo:
+
+final byte horas_laborables;
+
+("final" con este decimos que estamos hablando que estamos creando una constante, "byte" es el tipo de dato y "horas_laborables" es el nombre de esa variable)
+
+Como se inica una constante o como se le asigna un valor a esa constante?
+nombre_de_la_variable = valor.Ejemplo:
+
+horas_laborables = 9;
+
+NOTA: No puedes utilizar constantes si aun no las haz creado.
+
+Ahora veremos acerca de los operadores solo veremos algunos de los mas comunes
+
+ARITMETICOS
++	    suma				              a + b		  tambien funciona para concatenar
+-	    resta				              a - b		  tambien funciona como cambio de signo
+*	    multiplicacion			      a * b	
+/	    division			            a / b		  7 / 2 = 3.5
+%	    residuo				            a % b		  7 % 2 = 1
+++	  incremento			          ++a a++		el valor asignado a la variable "a" incrementara en 1
+--	  decremento			          --a a--		el valor asignado a la variable "a" decrementara en 1
+=	    asignacion			          a = b		  la variable "a" tiene asignado el valor de la variable "b"
++=	  suma combinada			      a += b		a = a + b
+-=	  resta combinada			      a -= b		a = a - b
+*=	  multiplicacion combinada	a *= b		a = a * b
+/=	  division combinada		    a /= b		a = a / b
+%=	  residuo combinado		      a %= b		a = a % b
+
+RELACION
+==	  igual que			            a == b		la variable "a" es igual a la variable "b", que tienen el mismo valor
+===	  igualdad estricta que		  a === b		la variable "a" tiene una igualdad estricta que a la variable "b", que tienen el mismo valor y son del mismo tipo de dato
+!=	  distinto que			        a !== b		la variable "a" es distinta que la variable "b"
+<	    menor que			            a < b		  la variable "a" es menor que la variable "b"
+>	    mayor que			            a > b		  la variable "a" es mayor que la variable "b"
+<=	  menor o igual que		      a <= b		la variable "a" es menor o igual que la variable "b"
+<=	  mayor o igual que		      a >= b		la variable "a" es mayor o igual que la variable "b"
+
+LOGICOS
+!	    negacion (NOT)			      !false		no es "false"
+||	  OR				                a || b		si la variable "a" es "true" o la variable "b" es "true" entonces "true", ya sea que alguna sea cierta se cumple
+&&	  AND				                a && b		si la variable "a" es "true" y la variable "b" es "true" entonces "true", las dos se deben de cumplir para que sea cierto
+
+La siguiente pagina les explica a detalle cada uno de ellos para que los conozcan y famliarizen y no se les haga extraño en el uso de nuestro codigo, de todos modos veremos algunos o la gran mayoria a lo largo del curso.
+
+https://www.arkaitzgarro.com/java/capitulo-4.html
+
+Ya tenemos la teoria ahora pasemos a la practica
+En nuestro proyecto crearemos una nueva clase llamada "UsoOperadores" y creamos nuestro metodo main.
+Creamos e inicializamos nuestras constantes.
+
+final float numero_1 = 7;
+final float numero_2 = 5;
+
+Seguido de esto crea una variable que la llamaremos "resultado" y le asignamos la suma nuestras 2 constantes y la mandamos a imprimir con el siguiente texto.
+
+float resultado = numero_1 + numero_2;
+
+System.out.println("La suma de mis variables es de: " + resultado + " unidades");
+
+En consola nos aparecera lo siguiente:
+
+La suma de mis variables es de: 12 unidades
+
+Ahora utilizaremos algunos operadores aritmeticos para que nos demos cuenta que es lo que estan haciendo ya en la practica y asi podamos entender en que momento utilizarlos, asi como tambien  recordaremos algunos temas ya antes vistos para hacer unas complementaciones
+
+System.out.printf("Resultado se imprimira su valor primero y despues incrementaras en 1: %.0f %n%n", resultado++);
+		
+System.out.printf("Ahora resultado tiene un valor de: %.0f %n%n", resultado);
+		
+System.out.printf("Ahora resultado incrementaras su valor en 1 y despues te imprimiras: %.0f  %n%n", ++resultado);
+
+System.out.printf("Resultado se imprimira su valor primero y despues decrementaras en 1: %.0f %n%n", resultado--);
+		
+System.out.printf("Ahora resultado tiene un valor de: %.0f %n%n", resultado);
+		
+System.out.printf("Ahora resultado decrementar su valor en 1 y despues te imprimiras: %.0f  %n%n", --resultado);
+		
+System.out.printf("Resultado tiene el valor de la constante numero_1: %.0f  %n%n", resultado = numero_1);
+		
+System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora le sumaremos la constante numero_2 : %.0f  %n%n", resultado += numero_2);
+		
+System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora le restaremos la constante numero_2 : %.0f  %n%n", resultado -= numero_2);
+		
+System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora la multiplicamos la constante numero_2 : %.0f  %n%n", resultado *= numero_2);
+		
+System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora la dividimos entre la constante numero_2 : %.0f  %n%n", resultado /= numero_2);
+		
+System.out.printf("Resultado tiene su ultimo valor asignado, pero a ahora obtendremos el resido entre la constante numero_2 : %.0f  %n%n", resultado %= numero_2);
+		
+resultado = numero_1 - numero_2;
+System.out.printf("La resta de mis constantes es de: %.0f %n%n", resultado);
+		
+resultado = numero_1 * numero_2;
+System.out.printf("La multiplicacion de mis constantes es de: %.0f %n%n", resultado);
+		
+resultado = numero_1 / numero_2;
+System.out.printf("El resultado de la division de mis constantes es de: %.5f %n%n",resultado);
+		
+resultado = numero_1 % numero_2;
+System.out.printf("El residuo de la division de mis constantes es de: %.1f ", resultado);
+
+Guardamos, compilamos y aparecera lo siguiente:
+
+La suma de mis constantes es de: 13 
+
+Resultado se imprimira su valor primero y despues incrementaras en 1: 13 
+
+Ahora resultado tiene un valor de: 14 
+
+Ahora resultado incrementaras su valor en 1 y despues te imprimiras: 15  
+
+Resultado se imprimira su valor primero y despues decrementaras en 1: 15 
+
+Ahora resultado tiene un valor de: 14 
+
+Ahora resultado decrementar su valor en 1 y despues te imprimiras: 13  
+
+Resultado tiene el valor de la constante numero_1: 7  
+
+Resultado tiene su ultimo valor asignado, pero a ahora le sumaremos la constante numero_2 : 13  
+
+Resultado tiene su ultimo valor asignado, pero a ahora le restaremos la constante numero_2 : 7  
+
+Resultado tiene su ultimo valor asignado, pero a ahora la multiplicamos la constante numero_2 : 42  
+
+Resultado tiene su ultimo valor asignado, pero a ahora la dividimos entre la constante numero_2 : 7  
+
+Resultado tiene su ultimo valor asignado, pero a ahora obtendremos el resido entre la constante numero_2 : 1  
+
+La resta de mis constantes es de: 1 
+
+La multiplicacion de mis constantes es de: 42 
+
+El resultado de la division de mis constantes es de: 1.16667 
+
+El residuo de la division de mis constantes es de: 1.0 
+
+En este punto solo hay 2 cosas que tenemos que destacar el porque el uso de un float si estamos ocupando numeros enteros y el %.0f o %.5f
+
+Lo del float se explico en una clase y lo del %.0f, bien como se dan cuenta estamos utilizando impresion por estilo de formato "printf", este nuevo estilo se ocupa para decir cuando numeros despues del punto queremos que se muestren y que la variable que se ocupe sea de tipo de dato float
+
+("%" imprime una variable, ".0" que no aparezca ninguna decimal y "f" que sea de tipo float)
+("%" imprime una variable, ".5" que aparezcan 5 decimales y "f" que sea de tipo float)
+
+Esto tambien sirve para los tipos de datos double "%.0d"
+NOTA: No puedes imprimir decimales en tipos de dato enteros, de dara error, por eso ocupamos este estilo para ciertas variables
