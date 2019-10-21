@@ -70,33 +70,33 @@ NOTA: No puedes utilizar constantes si aun no las haz creado.
 Ahora veremos acerca de los operadores solo veremos algunos de los mas comunes
 
 ARITMETICOS
-+	    suma				              a + b		  tambien funciona para concatenar
--	    resta				              a - b		  tambien funciona como cambio de signo
-*	    multiplicacion			      a * b	
-/	    division			            a / b		  7 / 2 = 3.5
-%	    residuo				            a % b		  7 % 2 = 1
-++	  incremento			          ++a a++		el valor asignado a la variable "a" incrementara en 1
---	  decremento			          --a a--		el valor asignado a la variable "a" decrementara en 1
-=	    asignacion			          a = b		  la variable "a" tiene asignado el valor de la variable "b"
-+=	  suma combinada			      a += b		a = a + b
--=	  resta combinada			      a -= b		a = a - b
-*=	  multiplicacion combinada	a *= b		a = a * b
-/=	  division combinada		    a /= b		a = a / b
-%=	  residuo combinado		      a %= b		a = a % b
++	  suma				a + b		  tambien funciona para concatenar
+-	  resta				a - b		  tambien funciona como cambio de signo
+*	  multiplicacion		a * b	
+/	  division			a / b		  7 / 2 = 3.5
+%	  residuo			a % b		  7 % 2 = 1
+++	  incremento			++a a++		  el valor asignado a la variable "a" incrementara en 1
+--	  decremento			--a a--		  el valor asignado a la variable "a" decrementara en 1
+=	  asignacion			a = b		  la variable "a" tiene asignado el valor de la variable "b"
++=	  suma combinada		a += b		  a = a + b
+-=	  resta combinada		a -= b		  a = a - b
+*=	  multiplicacion combinada	a *= b		  a = a * b
+/=	  division combinada		a /= b		  a = a / b
+%=	  residuo combinado		a %= b		  a = a % b
 
 RELACION
-==	  igual que			            a == b		la variable "a" es igual a la variable "b", que tienen el mismo valor
-===	  igualdad estricta que		  a === b		la variable "a" tiene una igualdad estricta que a la variable "b", que tienen el mismo valor y son del mismo tipo de dato
-!=	  distinto que			        a !== b		la variable "a" es distinta que la variable "b"
-<	    menor que			            a < b		  la variable "a" es menor que la variable "b"
->	    mayor que			            a > b		  la variable "a" es mayor que la variable "b"
-<=	  menor o igual que		      a <= b		la variable "a" es menor o igual que la variable "b"
-<=	  mayor o igual que		      a >= b		la variable "a" es mayor o igual que la variable "b"
+==	  igual que			a == b		la variable "a" es igual a la variable "b", que tienen el mismo valor
+===	  igualdad estricta que		a === b		la variable "a" tiene una igualdad estricta que a la variable "b", que tienen el mismo valor y son del mismo tipo de dato
+!=	  distinto que			a !== b		la variable "a" es distinta que la variable "b"
+<	  menor que			a < b		la variable "a" es menor que la variable "b"
+>	  mayor que			a > b		la variable "a" es mayor que la variable "b"
+<=	  menor o igual que		a <= b		la variable "a" es menor o igual que la variable "b"
+<=	  mayor o igual que		a >= b		la variable "a" es mayor o igual que la variable "b"
 
 LOGICOS
-!	    negacion (NOT)			      !false		no es "false"
-||	  OR				                a || b		si la variable "a" es "true" o la variable "b" es "true" entonces "true", ya sea que alguna sea cierta se cumple
-&&	  AND				                a && b		si la variable "a" es "true" y la variable "b" es "true" entonces "true", las dos se deben de cumplir para que sea cierto
+!	  negacion (NOT)		!false		no es "false"
+||	  OR				a || b		si la variable "a" es "true" o la variable "b" es "true" entonces "true", ya sea que alguna sea cierta se cumple
+&&	  AND				a && b		si la variable "a" es "true" y la variable "b" es "true" entonces "true", las dos se deben de cumplir para que sea cierto
 
 La siguiente pagina les explica a detalle cada uno de ellos para que los conozcan y famliarizen y no se les haga extraño en el uso de nuestro codigo, de todos modos veremos algunos o la gran mayoria a lo largo del curso.
 
