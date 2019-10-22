@@ -1,0 +1,170 @@
+import java.util.*;
+
+public class CondicionIf {
+	public static void main(String args[]) {
+		
+		Scanner entrada = new Scanner(System.in);
+		
+		int numero_1;
+		int numero_2;
+
+		System.out.println("Ingresa un numero entero");
+		numero_1 = entrada.nextInt();
+
+		System.out.println("Ingresa otro numero entero");
+		numero_2 = entrada.nextInt();
+
+		if(numero_1 == numero_2){
+			System.out.printf("El primero numero %d es igual al segundo numero %d%n", numero_1, numero_2);
+		}
+		
+		if(numero_1 != numero_2){
+			System.out.printf("El primero numero %d es distinto al segundo numero %d%n", numero_1, numero_2);
+		}
+		
+		if(numero_1 < numero_2){
+			System.out.printf("El primero numero %d es menor al segundo numero %d%n", numero_1, numero_2);
+		}
+		
+		if(numero_1 > numero_2){
+			System.out.printf("El primero numero %d es mayor al segundo numero %d%n", numero_1, numero_2);
+		}
+		
+		if(numero_1 <= numero_2){
+			System.out.printf("El primero numero %d es menor o igual al segundo numero %d%n", numero_1, numero_2);
+		}
+		
+		if(numero_1 >= numero_2){
+			System.out.printf("El primero numero %d es mayor o igual al segundo numero %d%n", numero_1, numero_2);
+		}
+		
+		if(numero_1 <= 10 && numero_2 <= 10){
+			System.out.println("Ambos numero son menores a 10 o iguales a 10");
+		}
+		
+		if(numero_1 <= 10 || numero_2 <= 10){
+			System.out.println("Puede que almenos un numero sea menor a 10 o igual a 10, o puede que ambos sean menores que 10 o sean 10");
+		}
+	}
+}
+
+Ahora en la clase de hoy aprenderemos la condicion if  asi como algunos operadores que teniamos pendientes y como tener una entrada de datos
+
+Aprenderemos el uso basico de la condicion "if" que en español vendria siendo "si", pero que no si en ingles es "yes"?, exacto amiguito pero en ingles cuando haces una comparacion en vez de utilizar la palabra "yes" ocupas la palabra "if"
+El uso basico de este comparador seria:
+
+if(que_quiero_comparar){
+	instrucciones de cuando se cumpla esta condicion
+}//llave de cierre de esta condicion
+
+
+si( mi amigo es mas grande que yo entonces){
+	yo soy pequeño a comparacion de mi amigo
+}
+
+Bien ahora los paquetes, lo que hacen es representar en orden jerarquico de las clases de la API de java.
+Vayamos a nuestra API de java para poder ver como estan ordenados, estos paquetes hay que verlos como carpetas, los cuales estan divididos en 2 carpetas principales java y javax, el punto que se encuentra despues de estos nombres tienen el nombre de otra carpeta, como puede ser:
+java.util
+
+Seguido de esto encontramos otras carpetas, como lo es:
+java.util.regex
+
+Con esto podemos decir que la carpeta "regex" esta desnto de la carpeta "util" que a su vez la carpeta "util" esta dentro de la carpeta "java"
+Cuando entramos a algun paquete desde la API no aparecera las clases que contiene esa carpeta para poderla utilizar.
+Ahora se preguntaran, porque son necesarios los paquetes o porque las inventarion?
+Para organizar las clases, evitar conflictos con nombres ya que no puede hacer 2 archivos del mismo nombre en la misma carpeta (2 documentos txt con el mismo nombre, en la misma carpeta), por lo cual si puedo tener 2 archivos del mismo nombre en carpetas distintas
+
+Pero entonces que paquete tenemos por defecto, porque no utilizamos un paquete cuando utilizamos la clase Math?
+Bien amiguito, por defecto nosotros tenemos el paquete "java.lang", como le hicieron y porque nadamas tenemos acceso predeterminado a esa carpeta, aun no lo se amiguito, creo imaginar porque es lo mas comun y utilizado, no se yo no hice la API
+
+Que debo hacer si quiero utilizar un paquete que no esta predeterminado?
+Debemos de importar esa carpeta con la palabra "import" pero esto va a ser desde la linea 1 de nuestro codigo, es decir primero vas a importar las carpetas que ocuparas y despues creas la clase de tu programa, como hoy veremos la clase "Scanner" haremos el ejemplo con esta carpeta
+
+import java.util.*;
+
+Con esto diremos que:
+("import" importa o traeme "*" todas las clases que esten dentro de la carpeta "util" que a su vez estan dentro de la carpeta "java")
+
+Si solo queremos utilizar una clase de esta carpeta, entonces pondremos lo siguiente:
+
+import java.util.Scanner;
+Con esto diremos que:
+("import" importa o traeme la clase "Scanner" que esten dentro de la carpeta "util" que a su vez estan dentro de la carpeta "java")
+
+Cual es la diferiencia entre importar todas las clases y solo una clase?
+Con el asterisco consumiras mas recursos del espacio en la memoria en vez de una clase, pero con el paso del tiempo te daras cuanta que es mas practico utilizar el asterisco.
+
+Oye pero no se que debo de importar para utilizar alguna otra clase, no se a que paquete pertenece?
+Nos dirigimos a nuestra API en nuestro decuadro de paquetes en la parte del inicio no aparecera "All classes" entramos y en las clases nos apareceran todas las que hay, buscamos la que queremos entramos y nos indicara en la parte de arriba de la informacion de esa clase a que paquete le pertenece
+
+En nuestro proyecto agregamos una nueva clase llamada "CondicionIf" importamos la carpeta "util" y agregamos nuestro metodo main
+
+En este punto debemos de hacer nuestro constructor de "Scanner" para poderla utilizar, revizen la API si quieren saber el porque
+
+Como creo e inicio mi constructor Scanner?
+
+Scanner entrada = new Scanner(System.in);
+
+Esto quiere decir que:
+("new" creamos un objeto de nombre "entrada" de tipo "Scanner")
+(es un tipo de dato "Scanner", "entrada" el nombre nuestro objeto, "new" objeto nuevo, "Scanner" nombre del constructor que va a tomar informacion de  "System.in")
+"System" es la consola del sistema "in" datos de entrada ("in" dentro o que entren)
+
+Dada esta explicacion, empezaremos a utilizarla en un pequelo ejercicio:
+
+int numero_1;
+int numero_2;
+
+System.out.println("Ingresa un numero entero");
+numero_1 = entrada.nextInt();
+
+System.out.println("Ingresa otro numero entero");
+numero_2 = entrada.nextInt();
+
+if(numero_1 == numero_2){
+	System.out.printf("El primero numero %d es igual al segundo numero %d%n", numero_1, numero_2);
+}
+		
+if(numero_1 != numero_2){
+	System.out.printf("El primero numero %d es distinto al segundo numero %d%n", numero_1, numero_2);
+}
+		
+if(numero_1 < numero_2){
+	System.out.printf("El primero numero %d es menor al segundo numero %d%n", numero_1, numero_2);
+}
+		
+if(numero_1 > numero_2){
+	System.out.printf("El primero numero %d es mayor al segundo numero %d%n", numero_1, numero_2);
+}
+		
+if(numero_1 <= numero_2){
+	System.out.printf("El primero numero %d es menor o igual al segundo numero %d%n", numero_1, numero_2);
+}
+		
+if(numero_1 >= numero_2){
+	System.out.printf("El primero numero %d es mayor o igual al segundo numero %d%n", numero_1, numero_2);
+}
+		
+if(numero_1 <= 10 && numero_2 <= 10){
+	System.out.println("Ambos numero son menores a 10 o iguales a 10");
+}
+		
+if(numero_1 <= 10 || numero_2 <= 10){
+	System.out.println("Puede que almenos un numero sea menor a 10 o igual a 10, o puede que ambos sean menores que 10 o sean 10");
+}
+
+Cosas por explicar en el codigo:
+Que es "entrada.nextInt()"?
+Del objeto "entrada" utilizaremos el metodo "next.Int()", donde nextInt quiere decir, que scaneara la siguiente entrada o dato "next"  como un entero "int"
+
+Recordemos
+if(numero_1 <= 10 && numero_2 <= 10)
+
+AND (&&) es para decir que si ambas condiciones se estan cumpliendo entonces realize algo, si una no se esta cumpliendo no aparece esa instruccion o esa condicion if no aparecera
+
+if(numero_1 <= 10 || numero_2 <= 10)
+
+OR (||) es decir que si almenos una condicion se esta cumpliendo realize algo, si ambas condiciones son correctas apareceran las instruccciones pero si ambas condiciones no se cumplen no aparece esa instruccion o esa condicion if no aparecera
+
+Por ultimo que esta sucediendo con tanto if?
+Nuevamente recordemso que nuestro codigo siempre se lee de arriba a abajo y de izquierda a derecha, por lo cual si una condicion termina evaluara entra en la siguiente condicion, apartir de ahora es importante que nos fijemos muy bien el el uso de las llaves y la identacion como se explico al inicio de este curso, asi que atentos a las siguientes clases.
