@@ -1,0 +1,199 @@
+import java.util.*;
+
+public class Uso_if_else {
+	public static void main(String args[]) {
+		
+		Scanner entrada = new Scanner(System.in);
+		int calificacion;
+		/*
+		System.out.println("Porfavor \ningrese la cantidad de aciertos que tuvo en su examen para indicarle si es que usted lo aprobo o lo reprobo:");
+		calificacion = entrada.nextInt();
+		
+		if (calificacion >= 60) {
+			System.out.println("Felicidades!!!! \nAprovaste el examen!!!!");
+		}else {
+			System.out.println("Estas reprovado, estudia para tu siguiente examen");
+		}
+		*/
+		/*
+		System.out.println("Porfavor\ningrese cuantos aciertos tuvo en el examen para darle su respectiva calificacion");
+		calificacion = entrada.nextInt();
+		
+		if (calificacion >= 90) {
+			System.out.println("A");
+		}else {
+			if (calificacion >= 80) {
+				System.out.println("B");
+			}else {
+				if (calificacion >= 70) {
+					System.out.println("C");
+				}else {
+					if (calificacion >= 60){
+						System.out.println("D");
+					}else {
+						System.out.println("F");
+					}
+				}
+			}
+		}
+		*/
+		System.out.println("Porfavor\ningrese cuantos aciertos tuvo en el examen para darle su respectiva calificacion");
+		calificacion = entrada.nextInt();
+		
+		if (calificacion >= 90) {
+			System.out.println("A");
+		}else if (calificacion >= 80) {
+			System.out.println("B");
+		}else if (calificacion >= 70) {
+			System.out.println("C");
+		}else if (calificacion >= 60) {
+			System.out.println("D");
+		}else if (calificacion < 60){
+			System.out.println("F");
+		}
+	}
+}
+
+
+
+
+
+
+El dia de hoy veremos lo que es el if...else, que en su traduccion al español seria "si... si no"
+
+El uso basico de esta instruccion seria:
+if(que_quiero_evaluar){
+	instrucciones de cuando se cumpla esta condicion
+}else{//si no se cumple
+	instrucciones de cuando no se cumpla la primera condicion
+}
+
+si ( mi amigo es mas alto que yo){
+	yo soy pequeño a comparacion de mi amigo
+}si no{
+	yo soy mas alto que mi amigo
+}
+
+La instruccion "if" es de tipo seleccion simple ya que realiza una accion si la condicion es cierta o la evita si la condicion es falsa, pero la instruccion "if...else" es de seleccion doble ya que realiza una accion si la condicion es verdadera, o realiza una acción distinta si la condicion es falsa, en este caso tambien entra la instruccion "switch" pero esta la veremos mas adelante
+
+Vamos a hacer un pequeño ejercicio con esta instruccion, vamos a calcular si es que pasamos nuestro examen
+
+En nuestro proyecto agregamos una nueva clase llamada "Uso_if_else", importamos la carpeta "util", agregamos nuestro metodo "main" y agregamos nuestro constructor "Scanner"
+
+import java.util.*;
+
+public class Uso_if_else {
+	public static void main(String args[]) {
+		
+		Scanner entrada = new Scanner(System.in);
+		int calificacion;
+		
+		System.out.println("Porfavor \ningrese la cantidad de aciertos que tuvo en su examen para indicarle si es que usted lo aprobo o lo reprobo:");
+		calificacion = entrada.nextInt();
+		
+		if(calificacion >= 60) {
+			System.out.println("Felicidades!!!! \nAprobaste el examen!!!!");
+		}else {
+			System.out.println("Estas reprobado, estudia para tu siguiente examen");
+		}
+	}
+}
+
+Como podemos observar en esta instruccion que "SI nuestra calificacion es mayor o igual a 60, nos mandara un mensaje de que aprobamos el examen pero SI NO nos mandara un mensaje de que reprobamos el examen"
+
+Tambien otro uso que le podemos dar a esta instruccion seria anidarlo, de la siguiente manera:
+
+import java.util.*;
+
+public class Uso_if_else {
+	public static void main(String args[]) {
+		
+		Scanner entrada = new Scanner(System.in);
+		int calificacion;
+
+		System.out.println("Porfavor\ningrese cuantos aciertos tuvo en el examen para darle su respectiva calificacion");
+		calificacion = entrada.nextInt();
+		
+		if (calificacion >= 90) {
+			System.out.println("A");
+		}else {
+			if (calificacion >= 80) {
+				System.out.println("B");
+			}else {
+				if (calificacion >= 70) {
+					System.out.println("C");
+				}else {
+					if (calificacion >= 60){
+						System.out.println("D");
+					}else {
+						System.out.println("F");
+					}
+				}
+			}
+		}
+	}
+}
+
+Con este ejercicio vemos que "SI NO tiene una calificacion mayor o igual a 90 mandara un mensaje de que tiene una calificacion de A, Si NO entonces evaluara si la calificacion es mayor o igual a 80 mandara un mensaje de que tiene una calificacion de B, SI NO..."
+
+Este es un claro ejemplo del porque es importante la identacion por el constante uso de llaves en cada instruccion.
+
+Otro ejemplo de esta instruccion seria el siguiente:
+
+import java.util.*;
+
+public class Uso_if_else {
+	public static void main(String args[]) {
+		
+		Scanner entrada = new Scanner(System.in);
+		int calificacion;
+		
+		System.out.println("Porfavor\ningrese cuantos aciertos tuvo en el examen para darle su respectiva calificacion");
+		calificacion = entrada.nextInt();
+		
+		if(calificacion >= 90) {
+			System.out.println("A");
+		}else if(calificacion >= 80) {
+			System.out.println("B");
+		}else if(calificacion >= 70) {
+			System.out.println("C");
+		}else if(calificacion >= 60) {
+			System.out.println("D");
+		}else {
+			System.out.println("F");
+		}
+	}
+}
+
+Con este otro ejemplo estas haciendo lo mismo pero haces una evaluacion directa en cada "else" y se sigue leyendo de la misma manera "SI calificacion es mayor o igual a 90 manda un mensaje de que tiene una calificacion de A, SI NO ENTONCES calificacion es mayor o igual a 80 manda un mensaje de que tiene calificacion de B, SI NO ENTONCES..."
+
+Un pequeño cambio sera el siguiente:
+
+import java.util.*;
+
+public class Uso_if_else {
+	public static void main(String args[]) {
+		
+		Scanner entrada = new Scanner(System.in);
+		int calificacion;
+
+		System.out.println("Porfavor\ningrese cuantos aciertos tuvo en el examen para darle su respectiva calificacion");
+		calificacion = entrada.nextInt();
+		
+		if (calificacion >= 90) {
+			System.out.println("A");
+		}else if (calificacion >= 80) {
+			System.out.println("B");
+		}else if (calificacion >= 70) {
+			System.out.println("C");
+		}else if (calificacion >= 60) {
+			System.out.println("D");
+		}else if (calificacion < 60){
+			System.out.println("F");
+		}
+	}
+}
+
+Aqui el unico cambio acomparacion del ejemplo anterior es en el ultimo "else" pues hacemos una comparacion al final, el "else" asi sin nada lo interpretaremos como que si nada de las condiciones anteriores se cumplieron entonces "POR DEFECTO" realizara lo que le indiques, pero si esa ultima condicion es falsa entonces la evitara
+
+Recuerden un "else" siempre tiene que se acompañado por su "if"
