@@ -10,10 +10,16 @@ public class Uso_if_else {
 		calificacion = entrada.nextInt();
 		
 		if (calificacion >= 60) {
-			System.out.println("Felicidades!!!! \nAprovaste el examen!!!!");
+			System.out.println("Felicidades!!!! \nAprobaste el examen!!!!");
 		}else {
-			System.out.println("Estas reprovado, estudia para tu siguiente examen");
+			System.out.println("Estas reprobado, estudia para tu siguiente examen");
 		}
+		*/
+		/*
+		System.out.println("Porfavor \ningrese la cantidad de aciertos que tuvo en su examen para indicarle si es que usted lo aprobo o lo reprobo:");
+		calificacion = entrada.nextInt();
+		
+		System.out.println(calificacion >= 60?"Felicidades!!!! \\nAprobaste el examen!!!!":"Estas reprobado, estudia para tu siguiente examen");
 		*/
 		/*
 		System.out.println("Porfavor\ningrese cuantos aciertos tuvo en el examen para darle su respectiva calificacion");
@@ -37,6 +43,7 @@ public class Uso_if_else {
 			}
 		}
 		*/
+		
 		System.out.println("Porfavor\ningrese cuantos aciertos tuvo en el examen para darle su respectiva calificacion");
 		calificacion = entrada.nextInt();
 		
@@ -101,7 +108,36 @@ public class Uso_if_else {
 
 Como podemos observar en esta instruccion que "SI nuestra calificacion es mayor o igual a 60, nos mandara un mensaje de que aprobamos el examen pero SI NO nos mandara un mensaje de que reprobamos el examen"
 
-Tambien otro uso que le podemos dar a esta instruccion seria anidarlo, de la siguiente manera:
+Hay una forma mas sencilla para hacer este tipo de instruccion y mas entendible que es el "operador condicional (?:)" puede utilizarse en lugar de una instrucción "if...else" tambien puede hacer tu codigo mas corto y claro.
+
+El uso basico de esta instruccion es:
+
+System.out.println(que_quiero_evaluar ? mensaje que quieres que aparesca de cuando SI se cumpla esta condicion : mensaje que quieres que aparesca de cuando NO se cumpla esta condicion);
+
+System.out.println( mi amigo es mas alto que yo ? "yo soy pequeño a comparacion de mi amigo" : "yo soy mas alto que mi amigo");
+
+La instruccion es simple, primero estamos evaluando una expresion booleana (a la izquierda el "?") si esta expresion es cierta (true) imprimira lo que este entre el "?" y ":", pero si la expresion es falsa (false) imprimira lo que esta a la derecha del ":".
+
+import java.util.*;
+
+public class Uso_if_else {
+	public static void main(String args[]) {
+		
+		Scanner entrada = new Scanner(System.in);
+		int calificacion;
+		
+		System.out.println("Porfavor \ningrese la cantidad de aciertos que tuvo en su examen para indicarle si es que usted lo aprobo o lo reprobo:");
+		calificacion = entrada.nextInt();
+		
+		System.out.println(calificacion >= 60?"Felicidades!!!! \\nAprobaste el examen!!!!\n" + calificacion : "Estas reprobado, estudia para tu siguiente examen\n" + calificacion);
+	}
+}
+
+Como podemos observar en esta instruccion que "SI nuestra calificacion es mayor o igual a 60, nos mandara un mensaje de que aprobamos el examen pero SI NO nos mandara un mensaje de que reprobamos el examen"
+
+Otra de las cosas que podemos observar es que todo el "if...else" lo reducimos a una sola linea de codigo y tiene que utilizarse en en un "print" no exactamente en un "println" pero se recomiendo asi como tambien en un "printf", dependera de como queremos darle la salida o en este caso la impresion
+
+Retomando a la instruccion "if...else" otra forma de utilizarlo seria anidarlo, de la siguiente manera:
 
 import java.util.*;
 
@@ -195,5 +231,3 @@ public class Uso_if_else {
 }
 
 Aqui el unico cambio acomparacion del ejemplo anterior es en el ultimo "else" pues hacemos una comparacion al final, el "else" asi sin nada lo interpretaremos como que si nada de las condiciones anteriores se cumplieron entonces "POR DEFECTO" realizara lo que le indiques, pero si esa ultima condicion es falsa entonces la evitara
-
-Recuerden un "else" siempre tiene que se acompañado por su "if"
